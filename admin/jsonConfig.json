@@ -61,7 +61,7 @@
       "items": {
         "_headerIdle": {
           "type": "header",
-          "text": "Automatischer Schlafmodus (kein Solar/Batterie)",
+          "text": "Automatischer Schlafmodus (kein Solar sowie Akku leer bzw. vom Stromnetz getrennt)",
           "size": 3,
           "sm": 12
         },
