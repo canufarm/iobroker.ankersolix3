@@ -1,107 +1,117 @@
 {
-  "type": "panel",
+  "type": "tabs",
   "items": {
-    "_headerAccount": {
-      "type": "header",
-      "text": "Anker-Konto",
-      "sm": 12
+    "tab_account": {
+      "type": "tab",
+      "label": "Anker-Konto",
+      "items": {
+        "ankerUser": {
+          "type": "text",
+          "label": "Anker E-Mail",
+          "sm": 12,
+          "md": 6,
+          "help": "E-Mail-Adresse des Anker-Kontos (Owner-Account)"
+        },
+        "ankerPass": {
+          "type": "password",
+          "label": "Anker Passwort",
+          "sm": 12,
+          "md": 6,
+          "help": "Passwort des Anker-Kontos"
+        },
+        "ankerCountry": {
+          "type": "text",
+          "label": "Ländercode (z.B. DE)",
+          "sm": 6,
+          "md": 3,
+          "help": "Zweistelliger ISO-Ländercode"
+        },
+        "ankerServer": {
+          "type": "text",
+          "label": "API-Server",
+          "sm": 12,
+          "md": 9,
+          "help": "EU-Server: https://ankerpower-api-eu.anker.com – nur ändern wenn nötig"
+        }
+      }
     },
-    "ankerUser": {
-      "type": "text",
-      "label": "Anker E-Mail",
-      "sm": 12,
-      "md": 6,
-      "help": "E-Mail-Adresse des Anker-Kontos (Owner-Account)"
+    "tab_device": {
+      "type": "tab",
+      "label": "Gerät",
+      "items": {
+        "deviceSns": {
+          "type": "text",
+          "label": "Seriennummer des Geräts",
+          "sm": 12,
+          "md": 8,
+          "help": "z.B. APCDEFGHI19001234"
+        },
+        "devicePn": {
+          "type": "text",
+          "label": "Produktcode (z.B. A17C5)",
+          "sm": 6,
+          "md": 4,
+          "help": "A17C5 = Solarbank 3 E2700"
+        }
+      }
     },
-    "ankerPass": {
-      "type": "password",
-      "label": "Anker Passwort",
-      "sm": 12,
-      "md": 6,
-      "help": "Passwort des Anker-Kontos"
-    },
-    "ankerCountry": {
-      "type": "text",
-      "label": "Ländercode (z.B. DE)",
-      "sm": 6,
-      "md": 3,
-      "help": "Zweistelliger ISO-Ländercode"
-    },
-    "ankerServer": {
-      "type": "text",
-      "label": "API-Server",
-      "sm": 12,
-      "md": 9,
-      "help": "EU-Server: https://ankerpower-api-eu.anker.com – nur ändern wenn nötig"
-    },
-    "_headerDevice": {
-      "type": "header",
-      "text": "Gerät",
-      "sm": 12
-    },
-    "deviceSns": {
-      "type": "text",
-      "label": "Seriennummer des Geräts",
-      "sm": 12,
-      "md": 8,
-      "help": "z.B. APCDEFGHI19001234"
-    },
-    "devicePn": {
-      "type": "text",
-      "label": "Produktcode (z.B. A17C5)",
-      "sm": 6,
-      "md": 4,
-      "help": "A17C5 = Solarbank 3 E2700"
-    },
-    "_headerIdle": {
-      "type": "header",
-      "text": "Automatischer Schlafmodus",
-      "sm": 12
-    },
-    "idleThresholdW": {
-      "type": "number",
-      "label": "Schwellenwert Solar (Watt)",
-      "sm": 6,
-      "md": 4,
-      "help": "Unter diesem Wert gilt das Gerät als inaktiv (0 = exakt 0W)"
-    },
-    "idleTimeoutS": {
-      "type": "number",
-      "label": "Wartezeit bis Trigger-Stop (Sekunden)",
-      "sm": 6,
-      "md": 4,
-      "help": "Wie lange Solar = 0 sein muss, bevor der Trigger pausiert (z.B. 120)"
-    },
-    "staleTimeoutS": {
-      "type": "number",
-      "label": "Timeout ohne Daten (Sekunden)",
-      "sm": 6,
-      "md": 4,
-      "help": "Wie lange keine eingehenden Daten, bis Trigger pausiert (z.B. 180)"
-    },
-    "_headerNight": {
-      "type": "header",
-      "text": "Nachtruhe-Fenster",
-      "sm": 12
-    },
-    "_nightHelp": {
-      "type": "staticText",
-      "text": "Format: 4 Ziffern (HHMM), z.B. 2200 und 0700. Wenn Start leer bleibt, ist die Nachtruhe deaktiviert.",
-      "sm": 12
-    },
-    "nightSleepStart": {
-      "type": "text",
-      "label": "Nachtruhe Beginn (HHMM)",
-      "sm": 6,
-      "md": 3,
-      "help": "z.B. 2200 – leer lassen um Nachtruhe zu deaktivieren"
-    },
-    "nightSleepEnd": {
-      "type": "text",
-      "label": "Nachtruhe Ende (HHMM)",
-      "sm": 6,
-      "md": 3,
-      "help": "z.B. 0700"
+    "tab_behavior": {
+      "type": "tab",
+      "label": "Schlaf & Nachtruhe",
+      "items": {
+        "_headerIdle": {
+          "type": "header",
+          "text": "Automatischer Schlafmodus (kein Solar/Batterie)",
+          "size": 3,
+          "sm": 12
+        },
+        "idleThresholdW": {
+          "type": "number",
+          "label": "Schwellenwert Solar (Watt)",
+          "sm": 6,
+          "md": 4,
+          "help": "Unter diesem Wert gilt das Gerät als inaktiv (0 = exakt 0W)"
+        },
+        "idleTimeoutS": {
+          "type": "number",
+          "label": "Wartezeit bis Trigger-Stop (Sekunden)",
+          "sm": 6,
+          "md": 4,
+          "help": "Wie lange Solar = 0 sein muss, bevor der Trigger pausiert (z.B. 120)"
+        },
+        "staleTimeoutS": {
+          "type": "number",
+          "label": "Timeout ohne Daten (Sekunden)",
+          "sm": 6,
+          "md": 4,
+          "help": "Wie lange keine eingehenden Daten, bis Trigger pausiert (z.B. 180)"
+        },
+        "_headerNight": {
+          "type": "header",
+          "text": "Nachtruhe-Fenster (feste Abschaltzeit)",
+          "size": 3,
+          "sm": 12
+        },
+        "_nightHelp": {
+          "type": "staticText",
+          "text": "Format: 4 Ziffern (HHMM), z.B. 2200 und 0700. Wenn Start leer bleibt, ist die Nachtruhe deaktiviert.",
+          "sm": 12
+        },
+        "nightSleepStart": {
+          "type": "text",
+          "label": "Nachtruhe Beginn (HHMM)",
+          "sm": 6,
+          "md": 3,
+          "help": "z.B. 2200 – leer lassen um Nachtruhe zu deaktivieren"
+        },
+        "nightSleepEnd": {
+          "type": "text",
+          "label": "Nachtruhe Ende (HHMM)",
+          "sm": 6,
+          "md": 3,
+          "help": "z.B. 0700"
+        }
+      }
     }
   }
 }
