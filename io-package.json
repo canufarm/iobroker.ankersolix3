@@ -1,0 +1,75 @@
+{
+  "common": {
+    "name": "ankersolix3",
+    "version": "0.1.0",
+    "news": {
+      "0.1.0": {
+        "en": "Initial version",
+        "de": "Erste Version"
+      }
+    },
+    "title": "Anker Solix 3",
+    "titleLang": {
+      "en": "Anker Solix 3 MQTT Bridge",
+      "de": "Anker Solix 3 MQTT Bridge"
+    },
+    "desc": {
+      "en": "Connects Anker Solix 3 / Solarbank 3 E2700 to ioBroker via Anker Cloud MQTT",
+      "de": "Verbindet die Anker Solix 3 / Solarbank 3 E2700 direkt mit ioBroker über die Anker Cloud"
+    },
+    "authors": ["local"],
+    "keywords": ["anker", "solix", "solar", "energy", "solarbank"],
+    "license": "MIT",
+    "platform": "Javascript/Node.js",
+    "main": "main.js",
+    "enabled": true,
+    "loglevel": "info",
+    "mode": "daemon",
+    "type": "energy",
+    "adminUI": {
+      "config": "json"
+    },
+    "dependencies": [
+      {
+        "js-controller": ">=4.0.0"
+      }
+    ]
+  },
+  "native": {
+    "ankerUser": "",
+    "ankerPass": "",
+    "ankerCountry": "DE",
+    "ankerServer": "https://ankerpower-api-eu.anker.com",
+    "deviceSns": "",
+    "devicePn": "A17C5",
+    "idleThresholdW": 0,
+    "idleTimeoutS": 120,
+    "staleTimeoutS": 180,
+    "nightSleepStart": "",
+    "nightSleepEnd": ""
+  },
+  "objects": [],
+  "instanceObjects": [
+    {
+      "_id": "info",
+      "type": "channel",
+      "common": {
+        "name": "Informationen"
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.connection",
+      "type": "state",
+      "common": {
+        "name": "Anker Cloud verbunden",
+        "type": "boolean",
+        "role": "indicator.connected",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    }
+  ]
+}
