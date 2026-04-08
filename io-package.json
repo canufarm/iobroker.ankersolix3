@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "ankersolix3",
-    "icon": "admin/ankersolix3.png",
+    "icon": "ankersolix3.png",
     "version": "0.1.0",
     "news": {
       "0.1.0": {
@@ -18,8 +18,8 @@
       "en": "Connects Anker Solix 3 / Solarbank 3 E2700 to ioBroker via Anker Cloud MQTT",
       "de": "Verbindet die Anker Solix 3 / Solarbank 3 E2700 direkt mit ioBroker über die Anker Cloud"
     },
-    "authors": ["local"],
-    "keywords": ["anker", "solix", "solar", "energy", "solarbank"],
+    "authors": ["canufarm"],
+    "keywords": ["iobroker", "anker", "solix", "solar", "energy", "solarbank", "realtime"],
     "license": "MIT",
     "platform": "Javascript/Node.js",
     "main": "main.js",

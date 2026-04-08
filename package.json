@@ -2,10 +2,10 @@
   "name": "iobroker.ankersolix3",
   "version": "0.1.0",
   "description": "Anker Solix 3 / Solarbank 3 E2700 – ioBroker Adapter via Anker Cloud MQTT",
-  "author": "local",
+  "author": "canufarm",
   "homepage": "",
   "license": "MIT",
-  "keywords": ["ioBroker", "anker", "solix", "solar", "energy"],
+  "keywords": ["iobroker", "anker", "solix", "solar", "energy", "solarbank", "realtime"],
   "main": "main.js",
   "scripts": {
     "start": "node main.js"
