@@ -1,6 +1,7 @@
 {
   "common": {
     "name": "ankersolix3",
+    "icon": "admin/ankersolix3.png",
     "version": "0.1.0",
     "news": {
       "0.1.0": {
