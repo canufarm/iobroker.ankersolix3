@@ -39,10 +39,10 @@
       "items": {
         "deviceSns": {
           "type": "text",
-          "label": "Seriennummer(n) des Geräts (kommagetrennt, leer = automatisch)",
+          "label": "Seriennummern des Geräts",
           "sm": 12,
           "md": 8,
-          "help": "z.B. APCDEFGHI19210123 – leer lassen für automatische Erkennung"
+          "help": "z.B. APCDJQD0F19200721"
         },
         "devicePn": {
           "type": "text",
@@ -59,7 +59,7 @@
       "items": {
         "_headerIdle": {
           "type": "header",
-          "text": "Automatischer Schlafmodus (wenn kein Solar und Batterie leer oder Strom getrennt)"
+          "text": "Automatischer Schlafmodus (kein Solar/Batterie)"
         },
         "idleThresholdW": {
           "type": "number",
@@ -70,25 +70,25 @@
         },
         "idleTimeoutS": {
           "type": "number",
-          "label": "Wartezeit bis Realtime Trigger-Stop (Sekunden)",
+          "label": "Wartezeit bis Trigger-Stop (Sekunden)",
           "sm": 6,
           "md": 4,
-          "help": "Wie lange muss Solar = 0 sein, bevor der Realtime Trigger pausiert wird"
+          "help": "Wie lange muss Solar = 0 sein, bevor der Trigger pausiert wird"
         },
         "staleTimeoutS": {
           "type": "number",
-          "label": "Timeout ohne Daten (Sekunden) (z.B. Solix schläft)",
+          "label": "Timeout ohne Daten (Sekunden)",
           "sm": 6,
           "md": 4,
           "help": "Wie lange ohne eingehende Daten, bis Trigger pausiert wird"
         },
         "_headerNight": {
           "type": "header",
-          "text": "Nachtruhe-Fenster (feste Abschaltzeit für den Realtime Trigger)"
+          "text": "Nachtruhe-Fenster (feste Abschaltzeit)"
         },
         "_nightHelp": {
           "type": "staticText",
-          "text": "Format: 4 Ziffern (HHMM), z.B. 2200 und 0700 (für 22:00 bis 07:00 Uhr). Wenn Start leer bleibt, ist die Nachtruhe deaktiviert.",
+          "text": "Format: 4 Ziffern (HHMM), z.B. 2200 und 0700. Wenn Start leer bleibt, ist die Nachtruhe deaktiviert.",
           "style": { "color": "gray", "fontSize": "0.85em" }
         },
         "nightSleepStart": {
@@ -96,7 +96,7 @@
           "label": "Nachtruhe Beginn (HHMM)",
           "sm": 6,
           "md": 3,
-          "help": "z.B. 2200 – leer = kein Nachtschlaf, bleibt aktiv, sofern Solix aktiv ist"
+          "help": "z.B. 2200 – leer = kein Nachtschlaf"
         },
         "nightSleepEnd": {
           "type": "text",
